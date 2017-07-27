@@ -1,6 +1,6 @@
 <?php
- 	require_once("../Rest.inc.php");
-	require ("../config.php");
+ 	require_once("Rest.inc.php");
+	require ("config.php");
 	class API extends REST {
 	
 		public $data = "";
@@ -20,9 +20,9 @@
 		public function __construct(){
 			parent::__construct();				// Init parent contructor
 			$this->dbConnect();					// Initiate Database connection
-			$this->tableName 	= "blog";
-			$this->tableColumns = array('id', 'title', 'category', 'autor', 'text', 'image_url', 'video_url', 'status');
-			$this->tableID 		= "id";
+			$this->tableName 	= "cotizacion";
+			$this->tableColumns = array('id_cotizacion', 'nombre', 'marca', 'modelo', 'precioFactura', 'email', 'img', 'rutaImg');
+			$this->tableID 		= "id_cotizacion";
 		}
 		
 		/*
